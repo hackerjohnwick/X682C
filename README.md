@@ -15,6 +15,7 @@
 ![NVRAM](https://img.shields.io/badge/NVRAM%2FIMEI%20backup-verified-brightgreen?style=flat-square)
 ![BROM](https://img.shields.io/badge/BROM%20bypass-verified-green?style=flat-square)
 ![DA write](https://img.shields.io/badge/DA%20write-verified-brightgreen?style=flat-square)
+![Bootloader](https://img.shields.io/badge/bootloader-unlocked-orange?style=flat-square)
 ![SPFT](https://img.shields.io/badge/SPFT%20flash-untested-yellow?style=flat-square)
 ![Hardware](https://img.shields.io/badge/dead%20eMMC-ISP%20only-red?style=flat-square)
 
@@ -53,6 +54,7 @@ how the phone boots, how it breaks, and how to bring it back.
 | SP Flash Tool actual flash | ⚠️ Not physically tested |
 | Full `super` write / NVRAM restore | ⚠️ Not executed, destructive |
 | Dead eMMC or no USB | ❌ Test point or ISP only |
+| Bootloader | ✅ Unlocked, data wiped |
 
 **Read this first:** [Recovery readiness](docs/RECOVERY-READINESS.md) -
 **Learn the whole thing:** [LEARN.md](docs/LEARN.md) -
@@ -81,7 +83,7 @@ source mirrors due GitHub asset limits; verify their hashes before flashing.
 | Build | `X682C-H694CD-Q-GL-220729V366` |
 | Security patch | 2022-07-05 |
 | Partitioning | non-A/B, dynamic `super`, eMMC |
-| Bootloader | Locked, verified boot green |
+| Bootloader | **Unlocked**, verified boot orange |
 | BROM security | SBC+SDA, open-source bypass works |
 
 Raw device data: [DEVICE.md](docs/DEVICE.md) -
@@ -144,7 +146,7 @@ adb shell getprop ro.build.display.id
 # X682C-H694CD-Q-GL-220729V366
 
 adb shell getprop ro.boot.verifiedbootstate
-# green
+# green when locked, orange when unlocked
 ```
 
 ### 3. Verify the kit

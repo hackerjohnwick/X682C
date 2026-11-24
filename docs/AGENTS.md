@@ -9,7 +9,7 @@ Recovery kit for **one phone**:
 
 - Infinix HOT 10, model **X682C**, MT6768, Android 10
 - Exact build `X682C-H694CD-Q-GL-220729V366`
-- Current state: **booted, stock, verified boot green**
+- Current state: **bootloader unlocked, data wiped, first-boot setup pending**
 - Exact full ROM, NVRAM/IMEI backup, auth bypass, verified DA read/write
 
 A **software brick is recoverable** if the phone still enumerates as
@@ -32,7 +32,7 @@ SP Flash Tool actual flash is **not** physically tested. mtkclient DA read/write
 | Serial | REDACTED (private) |
 | IMEI | private, `docs/device-info/identifiers.txt` |
 | Partitions | non-A/B, dynamic super, eMMC |
-| Bootloader | locked, verified boot green |
+| Bootloader | **unlocked**, verified boot orange |
 | BROM | SBC+SDA; open-source bypass works |
 
 Raw: `docs/DEVICE.md`, `docs/device-info/`.
@@ -117,7 +117,7 @@ SHA256SUMS.txt                   top-level artifact hashes
    adb shell getprop ro.build.display.id
    # X682C-H694CD-Q-GL-220729V366
    adb shell getprop ro.boot.verifiedbootstate
-   # green
+   # green when locked, orange when unlocked
    ```
 
 ## Recovery B — SP Flash Tool (primary)
@@ -209,8 +209,9 @@ SPFT bundles its own libs.
 
 ## Current state
 
-Online via ADB, exact V366, verified boot green, stock splash, NVRAM backup done.
-No flash write pending. User data untouched except logo writes.
+Bootloader unlocked on 2026-11-24 (`fastboot getvar unlocked: yes`). User data was
+wiped by the unlock. Exact V366, NVRAM backup, and stock splash are unchanged.
+Re-enable USB debugging after setup.
 
 ## Health check
 

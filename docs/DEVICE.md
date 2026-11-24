@@ -21,8 +21,8 @@ Dump taken over ADB on 2026-11-24. Raw data: `device-info/`.
 | Storage | 128 GB, userdata 110 GB |
 | Display | 720 x 1640, 320 dpi |
 | Battery | Li-ion, 100%, 4.28 V, health good |
-| Encryption | FBE (file-based), state encrypted |
-| Bootloader | LOCKED, verified boot GREEN, dm-verity enforcing |
+| Encryption | FBE (file-based), userdata wiped by unlock |
+| Bootloader | **UNLOCKED** (2026-11-24), verified boot orange, dm-verity enforcing |
 | Dynamic partitions | yes (super), non-A/B |
 
 ## Current partition map (`/dev/block/by-name`)

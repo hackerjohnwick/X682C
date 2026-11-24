@@ -1,7 +1,7 @@
 # Plan — LineageOS + OrangeFox + Magisk on Infinix Hot 10 (X682C)
 
 Device: Infinix X682C, MT6768, Android 10 stock, kernel 4.14.141,
-dynamic partitions, **non-A/B**, bootloader locked. Stock build:
+dynamic partitions, **non-A/B**, bootloader unlocked (data wiped). Stock build:
 `X682C-H694CD-Q-GL-220729V366`.
 
 Reality check: there is **no official LineageOS or OrangeFox build** for X682C.
@@ -23,7 +23,7 @@ Order: **unlock → OrangeFox → ROM → root**. Do not skip ahead.
 
 Unlocking wipes data. Back up photos/files first.
 
-## 1. Bootloader unlock
+## 1. Bootloader unlock (done 2026-11-24)
 
 ```sh
 adb reboot bootloader
@@ -38,7 +38,7 @@ fastboot reboot
 - If both fail, stop: no recovery/ROM work is possible on a locked bootloader.
 - After unlock, re-enable USB debugging; verify `ro.boot.flash.locked=0`.
 
-Gate: bootloader unlocked, phone boots stock, `fastboot` works.
+Gate: **passed** (`unlocked: yes`). Data was wiped. Re-enable USB debugging after setup.
 
 ## 2. Dump stock images (unlocked, before modifying)
 
