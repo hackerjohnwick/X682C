@@ -58,6 +58,14 @@ LineageOS device tree. Store all of it in `backup/stock-images/` (create it).
 
 ## 3. OrangeFox recovery
 
+Status 2026-11-24: no official TWRP or OrangeFox build for X682C. One
+unofficial TWRP image exists at `tools/x682c-twrp.img` (26,505,216 bytes,
+built 2021-07-11, Omni 10 based). It supports dynamic logical partitions in
+its fstab, but it has not been tested and contains porting red flags:
+`init.recovery.mt6878.rc` (wrong SoC name) and `/metadata` mapped to `md_udc`.
+Test it with `fastboot boot` before flashing. OrangeFox will require a port
+from this TWRP tree or a fresh device tree.
+
 1. Use the TWRP tree as the base:
    ```sh
    git clone -b pbrp https://github.com/Infinix-G70/android_device_twrp_infinix_x682c

@@ -15,6 +15,27 @@ Collected 2026-11-24. Third-party content; firmware itself was verified by hash.
 | `ShY1kk8S0R8` — How To Flash Infinix Hot 10 X682C Dead Boot Repair Free File | Dead-boot flash. |
 | `z-OjFtAzWqo` — Flash Infinix/Tecno Latest Security Without Test Point, BROM + UMT + SPFT | Not X682C-specific; same MTK/Infinix method for secure units. |
 
+## Custom recovery availability
+
+Checked 2026-11-24:
+
+| Source | Result |
+|---|---|
+| `twrp.me` | No X682C device page |
+| `orangefox.download` | 404 for X682C |
+| SourceForge `infinix-custom-recovery` | `x682c-twrp.img`, 2021-07-11, 26.5 MB |
+| GitHub `Infinix-G70/android_device_twrp_infinix_x682c` | PBRP branch, last push 2021-07-27 |
+| GitHub `Infinix-MT6768-LDM/Recovery_infinix_X682C` | SHRP kernel/dev tree, 2021-09-21 |
+| XDA | No maintained X682C TWRP/OrangeFox release |
+| OrangeFox API | No X682C entry |
+
+The single prebuilt TWRP is Omni 10 based and its fstab knows `system`,
+`vendor`, `product` as logical partitions. It is untested. Two red flags:
+`init.recovery.mt6878.rc` names the wrong SoC, and `/metadata` points at
+`md_udc` instead of `metadata`. Treat it as a test candidate, not a stable
+release. A reliable OrangeFox build needs a port from this tree or a fresh
+device tree.
+
 ## Forums / blogs
 
 - Hovatek `thread-35620` — X682B/X682C stock ROM + individual component files
