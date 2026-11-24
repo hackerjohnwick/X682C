@@ -4,7 +4,7 @@ backup/mtk-bypass/
 backup/*.tar.zst
 backup/*.sha256
 
-# Large/proprietary binaries — keep locally or publish via Releases
+# Large/proprietary binaries - keep locally or publish via Releases
 firmware/*.zip
 tools/SP_Flash_Tool_v5.2228_Linux/
 firmware/V366/
@@ -19,3 +19,6 @@ __pycache__/
 .state
 hwparam.json
 *.log
+
+# Local release staging
+release-assets/
