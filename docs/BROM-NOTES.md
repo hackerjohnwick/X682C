@@ -10,7 +10,7 @@ Tested 2026-11-24 on the connected unit.
 DAXFlash - Successfully uploaded stage 2
 DAXFlash - DA SLA is disabled
 ...
-done: /home/arnav/Infinix/backup/mtk-bypass
+done: $HOME/Infinix/backup/mtk-bypass
 ```
 
 872 MB, `sha256sum -c` passes. `boot.bin` / `recovery.bin` hash-match the exact
@@ -98,14 +98,14 @@ needed after it.
 1. Hold Power 15–20 s → Android.
 2. Run:
    ```sh
-   cd /home/arnav/Infinix/tools/bypass_utility
+   cd $HOME/Infinix/tools/bypass_utility
    adb reboot edl
    ../mtkclient/.venv/bin/python main.py
    ```
 3. When it prints `Protection disabled`, **immediately** run:
    ```sh
-   /home/arnav/Infinix/tools/mtkclient/.venv/bin/python \
-     /home/arnav/Infinix/scripts/dump-nvram.py
+   $HOME/Infinix/tools/mtkclient/.venv/bin/python \
+     $HOME/Infinix/scripts/dump-nvram.py
    ```
 4. Do not run `gettargetconfig` or any other mtkclient command between the
    bypass and the dump; the BROM window is short.

@@ -1,7 +1,7 @@
 # Project structure — Infinix X682C recovery kit
 
 This is the annotated map of the kit. All paths are relative to the repository
-root `/home/arnav/Infinix`.
+root `$HOME/Infinix`.
 
 ## Design
 
@@ -92,7 +92,7 @@ Infinix/
 | `backup-critical.sh` | Pre-bypass mtkclient loop for NVRAM/proinfo/persist/boot. Kept as reference. | Blocked by secure BROM without bypass. |
 
 Both Python scripts compute `ROOT` as the parent of `scripts/`, so they work from
-any current directory while the kit stays at `/home/arnav/Infinix`.
+any current directory while the kit stays at `$HOME/Infinix`.
 
 ## `firmware/`
 
@@ -169,11 +169,11 @@ were removed. The Python venv is local to this path and is gitignored.
 ## Verification
 
 ```sh
-cd /home/arnav/Infinix
+cd $HOME/Infinix
 sha256sum -c SHA256SUMS.txt
 cd backup/mtk-bypass && sha256sum -c SHA256SUMS.txt
 
-cd /home/arnav/Infinix
+cd $HOME/Infinix
 tools/mtkclient/.venv/bin/python -m py_compile \
   scripts/dump-nvram.py scripts/verify-write.py
 ```

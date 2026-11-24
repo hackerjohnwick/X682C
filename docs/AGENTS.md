@@ -1,6 +1,6 @@
 # AGENTS.md — Infinix X682C recovery kit
 
-Context for any future agent in `/home/arnav/Infinix`.
+Context for any future agent in `$HOME/Infinix`.
 Read this, then `docs/RECOVERY-READINESS.md` and `docs/BROM-NOTES.md`.
 
 ## TL;DR
@@ -142,14 +142,14 @@ SPFT console did not detect BROM here; GUI untested. If SPFT refuses, use C.
 2. Preloader: hold Vol Up + Vol Down, plug USB (or `adb reboot edl`).
 3. Bypass:
    ```sh
-   cd /home/arnav/Infinix/tools/bypass_utility
+   cd $HOME/Infinix/tools/bypass_utility
    ../mtkclient/.venv/bin/python main.py
    ```
    Wait for `Protection disabled`.
 4. Immediately run **one** client:
    - Backup:
      ```sh
-     cd /home/arnav/Infinix
+     cd $HOME/Infinix
      tools/mtkclient/.venv/bin/python scripts/dump-nvram.py
      ```
    - Write: use `scripts/verify-write.py` as the tested connection template;
@@ -159,7 +159,7 @@ SPFT console did not detect BROM here; GUI untested. If SPFT refuses, use C.
 
 Stock logo restore:
 ```sh
-cd /home/arnav/Infinix
+cd $HOME/Infinix
 env -u LOGO_IMAGE tools/mtkclient/.venv/bin/python scripts/verify-write.py
 ```
 
@@ -196,7 +196,7 @@ No USB/BROM → ISP shop must write these.
 **Software/firmware bricks on this X682C:** yes, with caveats.
 **Hardware-dead:** no.
 
-Self-contained only at `/home/arnav/Infinix` on Linux. If moved:
+Self-contained only at `$HOME/Infinix` on Linux. If moved:
 
 ```sh
 python3 -m venv tools/mtkclient/.venv
@@ -215,7 +215,7 @@ No flash write pending. User data untouched except logo writes.
 ## Health check
 
 ```sh
-cd /home/arnav/Infinix
+cd $HOME/Infinix
 sha256sum -c SHA256SUMS.txt
 cd backup/mtk-bypass && sha256sum -c SHA256SUMS.txt
 adb devices -l

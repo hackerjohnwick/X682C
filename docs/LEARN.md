@@ -1036,11 +1036,11 @@ Preferred: SP Flash Tool exact V366, Download Only.
 Fallback: mtkclient.
 
 ```sh
-cd /home/arnav/Infinix/tools/bypass_utility
+cd $HOME/Infinix/tools/bypass_utility
 ../mtkclient/.venv/bin/python main.py
 # wait for Protection disabled
 
-cd /home/arnav/Infinix
+cd $HOME/Infinix
 tools/mtkclient/.venv/bin/python scripts/dump-nvram.py
 ```
 

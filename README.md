@@ -171,11 +171,11 @@ Expected: every line `OK`.
 ### mtkclient path (verified)
 
 ```sh
-cd /home/arnav/Infinix/tools/bypass_utility
+cd $HOME/Infinix/tools/bypass_utility
 ../mtkclient/.venv/bin/python main.py
 # wait for: Protection disabled
 
-cd /home/arnav/Infinix
+cd $HOME/Infinix
 tools/mtkclient/.venv/bin/python scripts/dump-nvram.py
 ```
 
@@ -185,7 +185,7 @@ window is short. Do not run `gettargetconfig` first.
 ### Restore the stock splash
 
 ```sh
-cd /home/arnav/Infinix
+cd $HOME/Infinix
 env -u LOGO_IMAGE tools/mtkclient/.venv/bin/python scripts/verify-write.py
 ```
 
