@@ -8,8 +8,12 @@
 ![BROM](https://img.shields.io/badge/BROM%20bypass-verified-green?style=flat-square)
 ![SPFT](https://img.shields.io/badge/SPFT%20flash-untested-yellow?style=flat-square)
 
-Self-contained recovery kit for one **Infinix HOT 10 X682C** on exact firmware
+Recovery kit and field notes for one **Infinix HOT 10 X682C** on exact firmware
 `X682C-H694CD-Q-GL-220729V366`.
+
+This public repository contains the docs, scripts, and safe tooling source.
+Firmware images, the private NVRAM/IMEI backup, raw device data, and the
+proprietary SP Flash Tool stay in the local/private kit (see `.gitignore`).
 
 Built from a live ADB session. Exact factory ROM, device-unique partition
 backup, secure-BROM bypass, and a verified read/write path are all saved here.
