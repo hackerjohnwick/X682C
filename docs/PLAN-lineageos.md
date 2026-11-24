@@ -71,6 +71,11 @@ partition. Android still boots from `boot` and `super`. Test with
 `fastboot boot`; flash only `recovery`; never flash `boot`, `lk`, or `preloader`
 with a recovery image. Stock `recovery.img` is in the V366 package.
 
+**Target decision:** build current **OrangeFox R12.1** (TWRP 3.7.1 base), not
+the 2021 image. The old TWRP is only a reference and temporary test. Build
+TWRP 3.7.1 from the same tree as a fallback if OrangeFox-specific features
+cause problems.
+
 1. Use the TWRP tree as the base:
    ```sh
    git clone -b pbrp https://github.com/Infinix-G70/android_device_twrp_infinix_x682c
