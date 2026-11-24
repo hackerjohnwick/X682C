@@ -36,6 +36,10 @@ how the phone boots, how it breaks, and how to bring it back.
 > source. The private NVRAM/IMEI backup, raw device data, firmware ZIPs, and the
 > proprietary SP Flash Tool are intentionally **not** committed. See
 > [Repository scope](#repository-scope).
+>
+> All scripts are manual. Nothing runs automatically. Read
+> [AGENTS.md](docs/AGENTS.md) and [BROM-NOTES.md](docs/BROM-NOTES.md) first, then
+> run the scripts yourself for your own device.
 
 ## Status at a glance
 
