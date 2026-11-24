@@ -1,0 +1,6 @@
+# Shrink partition product from 3451228160 to 2961018880
+resize product 2961018880
+# Shrink partition system from 1524846592 to 1524613120
+resize system 1524613120
+# Grow partition vendor from 526811136 to 526815232
+resize vendor 526815232

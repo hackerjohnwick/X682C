@@ -1,0 +1,21 @@
+# Private device data — never commit
+docs/device-info/
+backup/mtk-bypass/
+backup/*.tar.zst
+backup/*.sha256
+
+# Large/proprietary binaries — keep locally or publish via Releases
+firmware/*.zip
+tools/SP_Flash_Tool_v5.2228_Linux/
+firmware/V366/
+firmware/V360/
+
+# Local tool state
+tools/mtkclient/.venv/
+tools/*/.git/
+tools/**/__pycache__/
+__pycache__/
+*.pyc
+.state
+hwparam.json
+*.log

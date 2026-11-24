@@ -1,0 +1,11 @@
+ota-property-files=metadata:69:440         
+ota-required-cache=314572800
+ota-type=BLOCK
+post-build=Infinix/X682C-GL/Infinix-X682C:10/QP1A.190711.020/220729V366:user/release-keys
+post-build-incremental=220729V366
+post-sdk-level=29
+post-security-patch-level=2022-07-05
+post-timestamp=1659110599
+pre-build=Infinix/X682C-GL/Infinix-X682C:10/QP1A.190711.020/220510V360:user/release-keys
+pre-build-incremental=220510V360
+pre-device=Infinix-X682C
