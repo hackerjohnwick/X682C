@@ -1,6 +1,6 @@
 <div align="center">
 
-# Infinix HOT 10 · X682C
+# Infinix HOT 10 - X682C
 
 **Recovery kit, field notes, and deep-dive documentation**
 
@@ -50,8 +50,8 @@ how the phone boots, how it breaks, and how to bring it back.
 | Full `super` write / NVRAM restore | ⚠️ Not executed, destructive |
 | Dead eMMC or no USB | ❌ Test point or ISP only |
 
-**Read this first:** [Recovery readiness](docs/RECOVERY-READINESS.md) ·
-**Learn the whole thing:** [LEARN.md](docs/LEARN.md) ·
+**Read this first:** [Recovery readiness](docs/RECOVERY-READINESS.md) -
+**Learn the whole thing:** [LEARN.md](docs/LEARN.md) -
 **Operate it:** [AGENTS.md](docs/AGENTS.md)
 
 ## Download
@@ -80,7 +80,7 @@ source mirrors due GitHub asset limits; verify their hashes before flashing.
 | Bootloader | Locked, verified boot green |
 | BROM security | SBC+SDA, open-source bypass works |
 
-Raw device data: [DEVICE.md](docs/DEVICE.md) ·
+Raw device data: [DEVICE.md](docs/DEVICE.md) -
 [device-info](docs/device-info/)
 
 ## Recovery flow
@@ -237,8 +237,8 @@ proinfo.bin  contains the device serial
 write test   exact logo.bin written, read back, hash identical
 ```
 
-Details: [V366 evidence](docs/V366-info.md) ·
-[backup manifest](docs/BACKUP-MANIFEST.md) ·
+Details: [V366 evidence](docs/V366-info.md) -
+[backup manifest](docs/BACKUP-MANIFEST.md) -
 [BROM notes](docs/BROM-NOTES.md)
 
 ## Safety
