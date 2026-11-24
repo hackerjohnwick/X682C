@@ -66,6 +66,11 @@ its fstab, but it has not been tested and contains porting red flags:
 Test it with `fastboot boot` before flashing. OrangeFox will require a port
 from this TWRP tree or a fresh device tree.
 
+Recovery risk is limited: a bad `recovery.img` breaks only the recovery
+partition. Android still boots from `boot` and `super`. Test with
+`fastboot boot`; flash only `recovery`; never flash `boot`, `lk`, or `preloader`
+with a recovery image. Stock `recovery.img` is in the V366 package.
+
 1. Use the TWRP tree as the base:
    ```sh
    git clone -b pbrp https://github.com/Infinix-G70/android_device_twrp_infinix_x682c
