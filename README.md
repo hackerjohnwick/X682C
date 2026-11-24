@@ -58,9 +58,10 @@ how the phone boots, how it breaks, and how to bring it back.
 
 [![Latest release](https://img.shields.io/github/v/release/hackerjohnwick/X682C?style=flat-square&color=blue)](https://github.com/hackerjohnwick/X682C/releases/latest)
 
-The release carries the exact V366 full ROM and fallback V360 ROM as split
-archives, plus the official OTA, TWRP reference, and SHA256 manifest. See
-`JOIN.md` in the release to reassemble and verify them.
+The release carries the official OTA, TWRP reference, public docs/scripts
+archive, SHA256 manifest, and verified source links for the exact V366 and
+fallback V360 full ROMs. The 2.8 GB and 3.2 GB firmware ZIPs stay on their
+source mirrors due GitHub asset limits; verify their hashes before flashing.
 
 ## Device
 
